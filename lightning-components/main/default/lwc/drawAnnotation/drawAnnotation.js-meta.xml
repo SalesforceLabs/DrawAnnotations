@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>48.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Draw Annotation</masterLabel>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property name="fieldName" label="Field Name (API)" type="String" />
+            <property name="autoSave" label="Auto-save to Field" type="Boolean" default="false" />
+            <property name="autoLoad" label="Auto-load from Field" type="Boolean" default="false" />
+            <property name="backgroundImage" label="Background Image" type="String" />
+            <property name="canvasWidth" label="Canvas Max Width" type="Integer" required="true" default="500" />
+            <property name="canvasHeight" label="Canvas Max Height" type="Integer" required="true" default="300" />
+            <property name="allowCanvasResize" label="Allow Canvas Resize" type="Boolean" />
+            <property name="stampingMode" label="Stamping Mode" type="Boolean" default="false"/>
+            <property name="drawingMode" label="Drawing Mode" type="Boolean" default="false" />
+            <supportedFormFactors>
+                <supportedFormFactor type="Large" />
+                <supportedFormFactor type="Small" />
+            </supportedFormFactors>
+        </targetConfig>
+        <targetConfig targets="lightning__AppPage">
+            <property name="backgroundImage" label="Background Image" type="String" />
+            <property name="canvasWidth" label="Canvas Max Width" type="Integer" required="true" default="500" />
+            <property name="canvasHeight" label="Canvas Max Height" type="Integer" required="true" default="300" />
+            <property name="allowCanvasResize" label="Allow Canvas Resize" type="Boolean" />
+            <property name="stampingMode" label="Stamping Mode" type="Boolean" default="false" />
+            <property name="drawingMode" label="Drawing Mode" type="Boolean" default="false" />
+            <supportedFormFactors>
+                <supportedFormFactor type="Large" />
+                <supportedFormFactor type="Small" />
+            </supportedFormFactors>
+        </targetConfig>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="backgroundImage" label="Background Image" type="String" role="inputOnly" />
+            <property name="canvasWidth" label="Canvas Max Width" type="Integer" required="true" default="500" role="inputOnly" />
+            <property name="canvasHeight" label="Canvas Max Height" type="Integer" required="true" default="300" role="inputOnly" />
+            <property name="allowCanvasResize" label="Allow Canvas Resize" type="Boolean" role="inputOnly" />
+            <property name="stampingMode" label="Stamping Mode" type="Boolean" default="false" role="inputOnly" />
+            <property name="drawingMode" label="Drawing Mode" type="Boolean" default="false" />
+            <property name="captureSave" label="Provide Output" type="Boolean" default="false" role="inputOnly" />
+            <property name="currentCanvasOut" label="JSON Output" type="String" role="outputOnly" />
+            <property name="currentPngOut" label="PNG Output" type="String" role="outputOnly" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

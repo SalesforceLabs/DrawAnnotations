@@ -1,0 +1,36 @@
+{
+  "name": "draw-annotation-lwc",
+  "version": "1.0.0",
+  "description": "Draw Annotation",
+  "scripts": {
+    "build": "sfdx shane:org:delete; ./orgInit.sh",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "reset": "echo \"sfdx force:apex:execute -f scripts/delete.cls && sfdx force:apex:execute -f scripts/init.cls\"",
+    "test:unit": "lwc-jest",
+    "test:unit:debug": "lwc-jest --debug",
+    "test:unit:watch": "lwc-jest --watch"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "lightning-components",
+      "test-app"
+    ],
+    "exec": "sfdx force:source:push",
+    "ext": "cls,xml,json,js,trigger,cmp,css,design,svg,html",
+    "delay": "2500"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mlayupan/draw-annotation-lwc.git"
+  },
+  "author": "Melisa Layupan, Chad Evans",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mlayupan/draw-annotation-lwc/issues"
+  },
+  "homepage": "https://github.com/mlayupan/draw-annotation-lwc#readme",
+  "devDependencies": {
+    "@salesforce/sfdx-lwc-jest": "^0.7.1",
+    "nodemon": "^1.19.1"
+  }
+}

@@ -1,0 +1,157 @@
+<!--
+/*
+ * Copyright (c) 2020, salesforce.com, inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: BSD-3-Clause
+ * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+ */
+-->
+
+<template>
+    <template if:false={hideToolbar}>
+        <div class="slds-builder-toolbar" role="toolbar">
+            <div class="slds-builder-toolbar__item-group" aria-label="Edit actions">
+                <lightning-button-group>
+                    <lightning-button-icon icon-name="utility:save"
+                        alternative-text="Save Canvas"
+                        title="Save"
+                        onclick={handleSaveClick}>
+                    </lightning-button-icon>
+                    <lightning-button-icon icon-name="utility:delete"
+                        alternative-text="Delete Selection"
+                        title="Delete"
+                        onclick={handleDeleteClick}>
+                    </lightning-button-icon>
+                    <lightning-button-icon-stateful icon-name="utility:touch_action"
+                        alternative-text="Select"
+                        title="Select"
+                        selected={selected.select}
+                        onclick={handleSelectionClick}>
+                    </lightning-button-icon-stateful>
+                </lightning-button-group>
+                <lightning-button-group>
+                    <lightning-button-menu icon-name="utility:settings" menu-alignment="auto" class="toolbar-settings-menu">
+                        
+                        <lightning-menu-subheader label="Object Settings"></lightning-menu-subheader>
+                        
+                        <lightning-menu-divider variant="compact"></lightning-menu-divider>
+
+                        <lightning-tile label="Color Settings" class="toolbar-settings-colors toolbar-settings-tile">
+                            <lightning-input type="color"
+                                name="input-fill-color"
+                                label="Fill Color"
+                                value={_fillColor}
+                                onchange={handleFillColorChange}>
+                            </lightning-input>
+                            <lightning-input type="color"
+                                name="input-line-color"
+                                label="Line Color"
+                                value={_lineColor}
+                                onchange={handleLineColorChange}>
+                            </lightning-input>
+                        </lightning-tile>
+                        
+                        <lightning-menu-divider variant="compact"></lightning-menu-divider>
+
+                        <lightning-tile label="Line Settings" class="toolbar-settings-line toolbar-settings-tile">
+                            <lightning-input type="number"
+                                name="input-line-width"
+                                label="Line Width"
+                                value={_lineWidth}
+                                variant="label-inline"
+                                onchange={handleLineWidthChange}>
+                            </lightning-input>
+                        </lightning-tile>
+
+                        <lightning-menu-divider variant="compact"></lightning-menu-divider>
+
+                        <lightning-tile label="Text Settings" class="toolbar-settings-text toolbar-settings-tile">
+                            <lightning-input type="number"
+                                name="input-text-size"
+                                label="Text Size"
+                                value={fontOptions.fontSize}
+                                variant="label-inline"
+                                onchange={handleTextSizeChange}>
+                            </lightning-input>
+                            <lightning-combobox name="input-font-family"
+                                label="Text Font Family"
+                                value={fontOptions.fontFamily}
+                                variant="label-inline"
+                                placeholder="Font Family"
+                                dropdown-alignment="right"
+                                options={currentFontFamilyOptions}
+                                onchange={handleFontFamilyChange}>
+                            </lightning-combobox>
+
+                        </lightning-tile>
+
+                    </lightning-button-menu>
+                    <lightning-button-icon-stateful icon-name="utility:edit"
+                        alternative-text="Draw with a Pencil"
+                        title="Pencil"
+                        selected={selected.drawing}
+                        onclick={handlePencilClick}>
+                    </lightning-button-icon-stateful>
+                    <lightning-button-icon-stateful icon-name="utility:text"
+                        alternative-text="Text"
+                        title="Text"
+                        selected={selected.text}
+                        onclick={handleTextClick}>
+                    </lightning-button-icon-stateful>
+                </lightning-button-group>
+                <lightning-button-group>
+                    <lightning-button-icon-stateful class="toolbar-shape-button"
+                        icon-name="utility:all"
+                        alternative-text="Shapes"
+                        title="Shapes"
+                        selected={selected.shapes}
+                        onclick={handleFakeShapeClick}>
+                    </lightning-button-icon-stateful>
+                    <lightning-button-menu class="toolbar-shape-menu">
+                        <template for:each={shapes} for:item="shape">
+                            <template if:true={shape.checked}>
+                                <lightning-menu-item checked key={shape.id}
+                                    label={shape.label}
+                                    class={shape.class}
+                                    onclick={handleShapeClick}></lightning-menu-item>
+                            </template>
+                            <template if:false={shape.checked}>
+                                <lightning-menu-item key={shape.id}
+                                    label={shape.label}
+                                    class={shape.class}
+                                    onclick={handleShapeClick}></lightning-menu-item>
+                            </template>
+                        </template>
+                    </lightning-button-menu>
+                    <template if:true={hasStamps}>
+                        <lightning-button-icon-stateful class="toolbar-stamp-button"
+                            icon-name="utility:approval"
+                            alternative-text="Stamps"
+                            title="Stamps"
+                            selected={selected.stamps}
+                            onclick={handleFakeStampClick}>
+                        </lightning-button-icon-stateful>
+                        <lightning-button-menu class="toolbar-stamp-menu">
+                            <template for:each={stamps} for:item="stamp">
+                                <template if:true={stamp.checked}>
+                                    <lightning-menu-item checked key={stamp.id}
+                                        label={stamp.label}
+                                        class={stamp.class}
+                                        onclick={handleStampClick}></lightning-menu-item>
+                                </template>
+                                <template if:false={stamp.checked}>
+                                    <lightning-menu-item key={stamp.id}
+                                        label={stamp.label}
+                                        class={stamp.class}
+                                        onclick={handleStampClick}></lightning-menu-item>
+                                </template>
+                            </template>
+                        </lightning-button-menu>
+                    </template>
+                </lightning-button-group>
+            </div>
+        </div>
+    </template>
+    <div class="draw-annotation-container" lwc:dom="manual">
+    </div>
+</template>

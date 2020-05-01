@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/drawAnnotation": [
+                "drawAnnotation/drawAnnotation.js"
+            ],
+            "c/drawAnnotationCanvas": [
+                "drawAnnotationCanvas/drawAnnotationCanvas.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+[
+    {
+        "sobject": "Drawing__c",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "Drawing__cs.json"
+        ]
+    }
+]

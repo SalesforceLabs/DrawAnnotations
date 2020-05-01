@@ -1,0 +1,9 @@
+scratch-org-def: config/project-scratch-def.json
+assign-permset: true
+permset-name: Test_App
+run-apex-tests: false
+delete-scratch-org: false
+show-scratch-org-url: true
+data-plans:
+  - ./data/Drawing__c-plan.json
+open-path: lightning/o/Drawing__c/list?filterName=All

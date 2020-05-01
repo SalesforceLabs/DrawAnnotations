@@ -1,0 +1,23 @@
+<!--
+/*
+ * Copyright (c) 2020, salesforce.com, inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: BSD-3-Clause
+ * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+ */
+-->
+
+<template>
+    <lightning-card>
+        <p class="slds-p-horizontal_small">
+            <c-draw-annotation-canvas class="da-canvas"
+                fire-auto-save={canHandleSave}
+                canvas-width={canvasWidth}
+                canvas-height={canvasHeight}
+                allow-canvas-resize={allowCanvasResize}
+                onsavecanvas={handleSaveCanvas}
+                onautosavecanvas={handleSaveCanvas}>
+            </c-draw-annotation-canvas>
+        </p>
+    </lightning-card>
+</template>

@@ -1,0 +1,16 @@
+{
+    "apiName": "Drawing__c",
+    "childRelationships": {},
+    "eTag": "b6a084d75f57d98908cd8cb6855bee06",
+    "fields": {
+        "Drawing__c": {
+            "displayValue": null,
+            "value": "{}"
+        }
+    },
+    "id": "a001h000003htBmAAI",
+    "lastModifiedById": "00517000002fESIAA2",
+    "lastModifiedDate": "2019-02-18T09:36:29.000Z",
+    "recordTypeInfo": null,
+    "systemModstamp": "2019-02-18T10:35:43.000Z"
+}

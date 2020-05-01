@@ -1,0 +1,70 @@
+{
+  "appPageId" : "864f5dc5-95b0-4ead-b6e0-3248582ba2f7",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "id" : "9f90a6b2-06f1-473d-81dc-92c3a7dddf00",
+  "label" : "Home",
+  "regions" : [ {
+    "id" : "f987c53a-788d-4cd6-aeaf-45495ef7fb56",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<div>     <p><span style='font-size: 48px;'>Let's get started!</span></p>     <ol>         <li><span style='font-size: 18px;'>Unfamiliar with Build Your Own? Click Take a Tour in the Help menu.</span></li>         <li><span style='font-size: 18px;'>Want to add more pages? Take a look at the Pages menu.</span></li>         <li><span style='font-size: 18px;'>Want more components on your page? Drag and drop components from the Components panel.</span></li>         <li><span style='font-size: 18px;'>Want your users to see your company logo? Head on over to the Branding panel.</span></li>         <li><span style='font-size: 18px;'>Refine the look of your community with a custom theme layout. See the Lightning Communities Developer Guide.</span></li>     </ol> </div>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "313e8e91-6097-41ee-a2b3-4da3dfceef33",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b52a7885-cbb2-4a2f-b0b8-1f29e625a1f9",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "flowArguments" : "",
+        "flowLayout" : "oneColumn",
+        "flowName" : "Test_Stamping"
+      },
+      "componentName" : "forceCommunity:flowCommunity",
+      "id" : "9e7e5ce0-f81a-4b08-a691-ad339db2f0e5",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "flowArguments" : "",
+        "flowLayout" : "oneColumn",
+        "flowName" : "Test_Drawing"
+      },
+      "componentName" : "forceCommunity:flowCommunity",
+      "id" : "70707e08-01bc-4a8f-b6ee-de3fc0b7abef",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "bd68034e-a066-43f8-a6ef-e96587a3a22c",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "description" : "",
+        "metaTags" : "",
+        "title" : "Home"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "ea9c1d6a-a681-436d-8790-26c1d72bea66",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "1ccf446e-4bf7-48f8-97ba-7f66bdee23fa",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "home"
+}

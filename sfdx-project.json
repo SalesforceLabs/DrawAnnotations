@@ -1,0 +1,25 @@
+{
+  "packageDirectories": [
+    {
+      "path": "lightning-components",
+      "package": "DrawAnnotationLwc",
+      "versionNumber": "1.0.0.NEXT",
+      "default": false
+    },
+    {
+      "path": "test-app",
+      "package": "TestApp",
+      "versionNumber": "1.0.0.NEXT",
+      "default": true,
+      "dependencies": [
+        { 
+            "package": "DrawAnnotationLwc",
+            "versionNumber": "1.0.0.LATEST"
+        }
+      ]
+    }
+  ],
+  "namespace": "c25draw",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "48.0"
+}
