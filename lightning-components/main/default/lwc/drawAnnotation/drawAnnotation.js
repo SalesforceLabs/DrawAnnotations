@@ -11,8 +11,12 @@ import { FlowAttributeChangeEvent } from 'lightning/flowSupport';
 
 import { getSObjectValue } from '@salesforce/apex';
 import getStamps from '@salesforce/apex/StampingHelper.getStamps';
+// watch out for Custom Metadata Types, they can't be used
+// with import field from '@salesforce/schema...' calls
+// see Import Limitations at https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.data_wire_service_about
 const LABEL_FIELD = 'c25draw__DA_Stamps__mdt.MasterLabel';
 const SVG_FIELD = 'c25draw__DA_Stamps__mdt.Stamp_SVG_String__c';
+const SVG_FIELD_WITH_NS = 'c25draw__DA_Stamps__mdt.c25draw__Stamp_SVG_String__c';
 
 import staticResources from "@salesforce/resourceUrl/backgrounds";
 
@@ -97,6 +101,7 @@ export default class DrawAnnotation extends LightningElement {
             for (let i = 0; i < this._stamps.length; i++) {
                 let mLabel = getSObjectValue(this._stamps[i], LABEL_FIELD);
                 let svgField = getSObjectValue(this._stamps[i], SVG_FIELD);
+                svgFIeld = svgField ? svgField : getSObjectValue(this._stamps[i], SVG_FIELD_WITH_NS);
                 if (mLabel && mLabel != "") {
                     this.getCanvas().addStampOption(mLabel, svgField);
                     if (this.stampingMode) {
