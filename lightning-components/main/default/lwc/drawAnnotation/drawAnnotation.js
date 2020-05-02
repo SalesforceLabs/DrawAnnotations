@@ -101,7 +101,7 @@ export default class DrawAnnotation extends LightningElement {
             for (let i = 0; i < this._stamps.length; i++) {
                 let mLabel = getSObjectValue(this._stamps[i], LABEL_FIELD);
                 let svgField = getSObjectValue(this._stamps[i], SVG_FIELD);
-                svgFIeld = svgField ? svgField : getSObjectValue(this._stamps[i], SVG_FIELD_WITH_NS);
+                svgField = svgField ? svgField : getSObjectValue(this._stamps[i], SVG_FIELD_WITH_NS);
                 if (mLabel && mLabel != "") {
                     this.getCanvas().addStampOption(mLabel, svgField);
                     if (this.stampingMode) {
