@@ -10,7 +10,7 @@ sfdx force:user:permset:assign -n Test_App
 # sfdx force:data:tree:export -q ./data/drawings.soql -d ./data/ -p
 sfdx force:data:tree:import -p ./data/Drawing__c-plan.json
 
-sfdx force:org:open -p lightning/o/Drawing__c/list?filterName=All
+sfdx force:org:open -p lightning/o/c25draw__Drawing__c/list?filterName=All
 
 # run tests (no aura components are used)
 # sfdx force:lightning:lwc:test:run --coverage
