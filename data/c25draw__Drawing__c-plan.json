@@ -1,10 +1,10 @@
 [
     {
-        "sobject": "Drawing__c",
+        "sobject": "c25draw__Drawing__c",
         "saveRefs": true,
         "resolveRefs": false,
         "files": [
-            "Drawing__cs.json"
+            "c25draw__Drawing__cs.json"
         ]
     }
 ]

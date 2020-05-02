@@ -72,7 +72,7 @@
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>canvasWidth</name>
-                <value>1000</value>
+                <value>290</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>drawingMode</name>
@@ -80,7 +80,7 @@
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>fieldName</name>
-                <value>Drawing__c</value>
+                <value>c25draw__Drawing__c</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>stampingMode</name>
