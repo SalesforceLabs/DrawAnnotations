@@ -1,25 +1,33 @@
 {
-  "packageDirectories": [
-    {
-      "path": "lightning-components",
-      "package": "DrawAnnotationLwc",
-      "versionNumber": "1.0.0.NEXT",
-      "default": false
-    },
-    {
-      "path": "test-app",
-      "package": "TestApp",
-      "versionNumber": "1.0.0.NEXT",
-      "default": true,
-      "dependencies": [
-        { 
-            "package": "DrawAnnotationLwc",
-            "versionNumber": "1.0.0.LATEST"
+    "packageDirectories": [
+        {
+            "path": "lightning-components",
+            "package": "DrawAnnotations",
+            "versionName": "May 2020 Release",
+            "versionDescription": "May 2020 Release for Salesforce AppExchange",
+            "versionNumber": "1.0.0.NEXT",
+            "definitionFile": "config/package-scratch-def.json",
+            "default": true
+        },
+        {
+            "path": "test-app",
+            "package": "TestApp",
+            "versionNumber": "1.0.0.NEXT",
+            "definitionFile": "config/project-scratch-def.json",
+            "default": false,
+            "dependencies": [
+                {
+                    "package": "DrawAnnotations",
+                    "versionNumber": "1.0.0.LATEST"
+                }
+            ]
         }
-      ]
+    ],
+    "namespace": "c25draw",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "48.0",
+    "packageAliases": {
+        "DrawAnnotations": "0Ho4R0000008OJ3SAM",
+        "DrawAnnotations@1.0.0-6": "04t4R000000c1YhQAI"
     }
-  ],
-  "namespace": "c25draw",
-  "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "48.0"
 }

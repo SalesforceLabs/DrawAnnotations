@@ -11,8 +11,8 @@ import { FlowAttributeChangeEvent } from 'lightning/flowSupport';
 
 import { getSObjectValue } from '@salesforce/apex';
 import getStamps from '@salesforce/apex/StampingHelper.getStamps';
-import LABEL_FIELD from '@salesforce/schema/DA_Stamps__mdt.MasterLabel';
-import SVG_FIELD from '@salesforce/schema/DA_Stamps__mdt.Stamp_SVG_String__c';
+const LABEL_FIELD = 'c25draw__DA_Stamps__mdt.MasterLabel';
+const SVG_FIELD = 'c25draw__DA_Stamps__mdt.Stamp_SVG_String__c';
 
 import staticResources from "@salesforce/resourceUrl/backgrounds";
 
