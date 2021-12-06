@@ -22,20 +22,6 @@
                     "versionNumber": "1.0.1.LATEST"
                 }
             ]
-        },
-        {
-            "path": "force-app",
-            "package": "Draw Annotations",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT",
-            "default": false
-        },
-        {
-            "path": "force-app",
-            "package": "Drawing and Annotations",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT",
-            "default": false
         }
     ],
     "namespace": "c25draw",
@@ -44,8 +30,6 @@
     "packageAliases": {
         "DrawAnnotations": "0Ho4R0000008OJ3SAM",
         "DrawAnnotations@1.0.0-6": "04t4R000000c1YhQAI",
-        "DrawAnnotations@1.0.1-1": "04t4R000000c1ZBQAY",
-        "Draw Annotations": "0Ho5f000000k9rXCAQ",
-        "Drawing and Annotations": "0Ho5f000000k9rcCAA"
+        "DrawAnnotations@1.0.1-1": "04t4R000000c1ZBQAY"
     }
 }
