@@ -9,10 +9,6 @@ Provides a nice drawing surface for your needs. Leverages [fabric.js](http://fab
 * Record Home: live loading and saving of canvas
 * Flow Screen: Provides both JSON and Image to consume as needed from the flow
 
-## Deploy to SFDX Scratch Org (Fast)
-
-[![Deploy](https://deploy-to-sfdx.com/dist/assets/images/DeployToSFDX.svg)](https://deploy-to-sfdx.com)
-
 ## Deploy to Own Scratch Org
 
 Use the script at [orgInit.sh](orgInit.sh):
